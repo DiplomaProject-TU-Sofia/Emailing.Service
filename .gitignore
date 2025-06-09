@@ -1,0 +1,39 @@
+# .NET Core / .NET 5+ specific ignores
+bin/
+obj/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+*.vcxproj.user
+
+# Azure Functions local settings
+local.settings.json
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+
+# Rider IDE files
+.idea/
+
+# Publish output
+publish/
+
+# Logs
+*.log
+
+# Docker files (ако ползваш docker)
+**/docker-compose.override.yml
+
+# User-specific files
+*.rsuser
+*.sln.ide
+
+# Others
+*.dbmdl
