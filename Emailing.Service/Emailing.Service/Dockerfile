@@ -5,11 +5,11 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY ["Emailing.Service/Emailing.Service/Emailing.Service/Emailing.Service.sln", "Emailing.Service/Emailing.Service/Emailing.Service/"]
+COPY ["Emailing.Service/Emailing.Service/Emailing.Service/Emailing.Service.csproj", "Emailing.Service/Emailing.Service/Emailing.Service/"]
 COPY ["Emailing.Service/Emailing.Service/Emailing.Service/Emailing.Service.csproj", "Emailing.Service/Emailing.Service/Emailing.Service/"]
 COPY ["Emailing.Service/Emailing.Service/Emailing.Service.Data/Emailing.Service.Data.csproj", "Emailing.Service/Emailing.Service/Emailing.Service.Data/"]
 
-RUN dotnet restore "Emailing.Service/Emailing.Service/Emailing.Service/Emailing.Service.sln"
+RUN dotnet restore "Emailing.Service/Emailing.Service/Emailing.Service/Emailing.Service.csproj"
 
 COPY . .
 
